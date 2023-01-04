@@ -24,3 +24,13 @@ pipeline:
   mutators:
   - image: gcr.io/jbelamaric-public/nephio-upf-ipam-fn:latest
   - image: gcr.io/jbelamaric-public/nad-inject-fn:latest
+status:
+  conditions:
+  - type: nf.nephio.org.UPFDeployment.upf-deployment.Injected
+    status: "False"
+    reason: ResourceNotFound
+    message: upfdeployments.nf.nephio.org "avicha-edge-1" not found
+  - type: infra.nephio.org.ClusterContext.cluster-context.Injected
+    status: "False"
+    reason: ResourceNotFound
+    message: clustercontexts.infra.nephio.org "avicha-edge-1" not found
