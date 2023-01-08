@@ -36,17 +36,17 @@ status:
     message: clustercontexts.infra.nephio.org "avicha-edge-1" not found
   - type: ipam.nephio.org.IPAMAllocation.upf-example-n6.upf.Injected
     status: "False"
-    reason: PendingInjection
-    message: Awaiting IP allocation and injection
+    reason: ErrorDuringInjection
+    message: 'cannot allocate ip: rpc error: code = Unknown desc = ipam ni not ready or network-instance upf-example-internet not correct'
   - type: ipam.nephio.org.IPAMAllocation.upf-example-n3.upf.Injected
     status: "False"
-    reason: PendingInjection
-    message: Awaiting IP allocation and injection
+    reason: ErrorDuringInjection
+    message: 'cannot allocate ip: rpc error: code = Unknown desc = ipam ni not ready or network-instance upf-example-internet not correct'
   - type: ipam.nephio.org.IPAMAllocation.upf-example-n4.upf.Injected
     status: "False"
-    reason: PendingInjection
-    message: Awaiting IP allocation and injection
+    reason: ErrorDuringInjection
+    message: 'cannot allocate ip: rpc error: code = Unknown desc = ipam ni not ready or network-instance upf-example-internet not correct'
   - type: ipam.nephio.org.IPAMAllocation.upf-example-internet.upf.Injected
     status: "False"
-    reason: PendingInjection
-    message: Awaiting IP allocation and injection
+    reason: ErrorDuringInjection
+    message: 'cannot allocate ip: rpc error: code = Unknown desc = ipam ni not ready or network-instance upf-example-internet not correct'
