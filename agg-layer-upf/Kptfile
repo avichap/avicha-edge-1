@@ -28,8 +28,8 @@ status:
   conditions:
   - type: nf.nephio.org.UPFDeployment.upf-deployment.Injected
     status: "False"
-    reason: ResourceNotFound
-    message: upfdeployments.nf.nephio.org "avicha-edge-1" not found
+    reason: ErrorDuringInjection
+    message: FiveGCoreTopology.nf.nephio.org "fivegcoretopology-sample" not found
   - type: infra.nephio.org.ClusterContext.cluster-context.Injected
     status: "False"
     reason: ResourceNotFound
