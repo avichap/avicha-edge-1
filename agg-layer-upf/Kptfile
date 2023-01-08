@@ -1,0 +1,52 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata: # kpt-merge: /agg-layer-upf
+  name: agg-layer-upf
+  annotations:
+    config.kubernetes.io/local-config: "true"
+    internal.kpt.dev/upstream-identifier: kpt.dev|Kptfile|default|agg-layer-upf
+upstream:
+  type: git
+  git:
+    repo: https://github.com/avichap/avicha-catalog.git
+    directory: free5gc-upf
+    ref: free5gc-upf/v1
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/avichap/avicha-catalog.git
+    directory: free5gc-upf
+    ref: free5gc-upf/v1
+    commit: e0d07ab76c71d877c4e8fbd16c143762154b5769
+info:
+  description: free5gc UPF package for creating UPF deployments that will be made by the Nephio free5gc edge operator
+pipeline:
+  mutators:
+  - image: gcr.io/jbelamaric-public/nephio-upf-ipam-fn:latest
+  - image: gcr.io/jbelamaric-public/nad-inject-fn:latest
+status:
+  conditions:
+  - type: nf.nephio.org.UPFDeployment.upf-deployment.Injected
+    status: "True"
+    reason: ResourceInjected
+    message: injected from FiveGCoreTopology "fivegcoretopology-sample" UPF name "agg-layer"
+  - type: infra.nephio.org.ClusterContext.cluster-context.Injected
+    status: "False"
+    reason: ResourceNotFound
+    message: clustercontexts.infra.nephio.org "avicha-edge-1" not found
+  - type: ipam.nephio.org.IPAMAllocation.upf-example-n6.upf.Injected
+    status: "False"
+    reason: ErrorDuringInjection
+    message: 'cannot allocate ip: rpc error: code = Unknown desc = ipam ni not ready or network-instance upf-example-internet not correct'
+  - type: ipam.nephio.org.IPAMAllocation.upf-example-n3.upf.Injected
+    status: "False"
+    reason: ErrorDuringInjection
+    message: 'cannot allocate ip: rpc error: code = Unknown desc = ipam ni not ready or network-instance upf-example-internet not correct'
+  - type: ipam.nephio.org.IPAMAllocation.upf-example-n4.upf.Injected
+    status: "False"
+    reason: ErrorDuringInjection
+    message: 'cannot allocate ip: rpc error: code = Unknown desc = ipam ni not ready or network-instance upf-example-internet not correct'
+  - type: ipam.nephio.org.IPAMAllocation.upf-example-internet.upf.Injected
+    status: "False"
+    reason: ErrorDuringInjection
+    message: 'cannot allocate ip: rpc error: code = Unknown desc = ipam ni not ready or network-instance upf-example-internet not correct'
