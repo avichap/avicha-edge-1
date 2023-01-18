@@ -36,17 +36,17 @@ status:
     message: injected from FiveGCoreTopology "fivegcoretopology-sample-6" UPF name "agg-layer-6"
   - type: ipam.nephio.org.IPAMAllocation.upf-avicha-edge-1-n3.upf6.Injected
     status: "False"
-    reason: PendingInjection
-    message: Awaiting IP allocation and injection
+    reason: ErrorDuringInjection
+    message: 'cannot allocate ip: rpc error: code = Unknown desc = no available routes based on the label selector: nephio.org/network-instance in (sample-vpc),nephio.org/network-name in (sample-n3-net),nephio.org/prefix-kind in (network)'
   - type: ipam.nephio.org.IPAMAllocation.upf-avicha-edge-1-n4.upf6.Injected
     status: "False"
-    reason: PendingInjection
-    message: Awaiting IP allocation and injection
+    reason: ErrorDuringInjection
+    message: 'cannot allocate ip: rpc error: code = Unknown desc = no available routes based on the label selector: nephio.org/network-instance in (sample-vpc),nephio.org/network-name in (sample-n3-net),nephio.org/prefix-kind in (network)'
   - type: ipam.nephio.org.IPAMAllocation.upf-avicha-edge-1-n6.upf6.Injected
     status: "False"
-    reason: PendingInjection
-    message: Awaiting IP allocation and injection
+    reason: ErrorDuringInjection
+    message: 'cannot allocate ip: rpc error: code = Unknown desc = no available routes based on the label selector: nephio.org/network-instance in (sample-vpc),nephio.org/network-name in (sample-n3-net),nephio.org/prefix-kind in (network)'
   - type: ipam.nephio.org.IPAMAllocation.upf-avicha-edge-1-internet.upf6.Injected
-    status: "False"
-    reason: PendingInjection
-    message: Awaiting IP allocation and injection
+    status: "True"
+    reason: ResourceInjected
+    message: Injected IP allocation
