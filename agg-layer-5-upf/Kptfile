@@ -35,18 +35,18 @@ status:
     reason: ResourceInjectedFromCluster
     message: resource with apiVersion "infra.nephio.org/v1alpha1", kind "ClusterContext", name "avicha-edge-1", and namespace "default" injected to the package revision from the cluster
   - type: ipam.nephio.org.IPAMAllocation.upf-avicha-edge-1-n3.upf5.Injected
-    status: "False"
-    reason: PendingInjection
-    message: Awaiting IP allocation and injection
+    status: "True"
+    reason: ResourceInjected
+    message: Injected IP allocation
   - type: ipam.nephio.org.IPAMAllocation.upf-avicha-edge-1-n4.upf5.Injected
-    status: "False"
-    reason: PendingInjection
-    message: Awaiting IP allocation and injection
+    status: "True"
+    reason: ResourceInjected
+    message: Injected IP allocation
   - type: ipam.nephio.org.IPAMAllocation.upf-avicha-edge-1-n6.upf5.Injected
-    status: "False"
-    reason: PendingInjection
-    message: Awaiting IP allocation and injection
+    status: "True"
+    reason: ResourceInjected
+    message: Injected IP allocation
   - type: ipam.nephio.org.IPAMAllocation.upf-avicha-edge-1-internet.upf5.Injected
-    status: "False"
-    reason: PendingInjection
-    message: Awaiting IP allocation and injection
+    status: "True"
+    reason: ResourceInjected
+    message: Injected IP allocation
